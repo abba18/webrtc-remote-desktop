@@ -40,7 +40,7 @@ For Windows libvpx installation, follow below installation steps:
 ### Running in development mode
 
 ```
-git clone https://github.com/imtiyazs/webrtc-remote-desktop.git
+git clone https://github.com/abba18/webrtc-remote-desktop.git
 cd webrtc-remote-desktop
 go mod tidy
 go run -tags "h264enc" cmd/agent.go
