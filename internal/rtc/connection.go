@@ -13,10 +13,10 @@ import (
 	"github.com/tidwall/sjson"
 	"github.com/pion/sdp"
 	"github.com/pion/webrtc/v2"
-	"github.com/imtiyazs/webrtc-remote-desktop/internal/encoders"
-	"github.com/imtiyazs/webrtc-remote-desktop/internal/config"
+	"github.com/abba18/webrtc-remote-desktop/internal/encoders"
+	"github.com/abba18/webrtc-remote-desktop/internal/config"
 	"github.com/go-vgo/robotgo"
-	"github.com/imtiyazs/webrtc-remote-desktop/internal/rdisplay"
+	"github.com/abba18/webrtc-remote-desktop/internal/rdisplay"
 )
 
 // RemoteScreenPeerConn is a webrtc.PeerConnection wrapper that implements the
