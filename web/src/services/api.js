@@ -6,3 +6,8 @@ export const queryDeviceList = async () => {
     const resp = get("/posts?_limit=5")
     return resp
 }
+
+export const connectDevice = (param) => {
+    const resp = post("api/session", param)
+    return resp
+}

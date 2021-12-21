@@ -8,7 +8,11 @@ import Device from '../components/Device/index.jsx'
 function DashBoard() {
     return (
         <Layout>
-            <Layout.Sider trigger={null} collapsible collapsed={false}>
+            <Layout.Sider style={{
+                overflow: 'auto',
+                height: '100vh',
+            }}
+                trigger={null} collapsible collapsed={false}>
                 <div className="site-layout-logo" />
                 <Nav />
             </Layout.Sider>

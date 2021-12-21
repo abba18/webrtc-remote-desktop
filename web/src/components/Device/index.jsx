@@ -6,24 +6,26 @@ import {
 } from '@ant-design/icons';
 
 import { useState, useEffect } from 'react'
-import { queryDeviceList } from '../../services/api'
+import { queryDeviceList, connectDevice } from '../../services/api'
+import { objToUri } from '../../utils/utils'
 
 function Device() {
     const [devices, setDevice] = useState([])
 
     function clickConnectHandle(item) {
         console.log("connect", item.uid)
-        queryDeviceList().then((data) => {
-
-            setDevice(data)
-        }).catch(err => {
-            console.log("handler error", err)
-        })
+        openDevice()
     }
     function clickDeleteHandle(item) {
         console.log("delete", item.uid)
     }
-
+    function openDevice(uid) {
+        let param = { uid: uid }
+        const uri = objToUri(param)
+        // const newWindow = window.open("/monitor", '_blank', 'location=0,status=0')
+        const newWindow = window.open("/monitor" + uri, '_blank', 'location=0')
+        if (newWindow) newWindow.opener = null
+    }
     // load api data
     useEffect(() => {
         const devices = [
