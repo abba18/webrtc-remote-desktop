@@ -1,0 +1,22 @@
+.remote-video {
+  z-index: 1;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.remote-canvas {
+  left:0px;
+  top:0px;
+  position: absolute;
+  z-index: 10;
+  /* cursor:none; */
+  border: 1px solid #34e411
+}
+
+.top-btn {
+  position: fixed;
+  z-index: 100;
+}
